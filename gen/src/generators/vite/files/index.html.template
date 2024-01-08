@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+	</style>
+	<title><%= name %></title>
+</head>
+<body>
+	<main></main>
+	<script type="module" src="./src/scripts/app.ts"></script>
+</body>
+</html>

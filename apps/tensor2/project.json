@@ -1,0 +1,42 @@
+{
+	"name": "tensor2",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "apps/tensor2/src",
+	"projectType": "application",
+	"targets": {
+		"build": {
+			"executor": "@nx/vite:build",
+			"outputs": ["{options.outputPath}"],
+			"defaultConfiguration": "production",
+			"options": {
+				"outputPath": "apps/tensor2/dist"
+			},
+			"configurations": {
+				"development": {
+					"mode": "development"
+				},
+				"production": {
+					"mode": "production"
+				}
+			}
+		},
+		"dev": {
+			"executor": "@nx/vite:dev-server",
+			"defaultConfiguration": "development",
+			"options": {
+				"buildTarget": "tensor2:build"
+			},
+			"configurations": {
+				"development": {
+					"buildTarget": "tensor2:build:development",
+					"hmr": true
+				},
+				"production": {
+					"buildTarget": "tensor2:build:production",
+					"hmr": false
+				}
+			}
+		}
+	},
+	"tags": []
+}
