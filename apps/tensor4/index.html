@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<title>tensor3</title>
+	</head>
+	<body style="display: flex; justify-content: center;">
+		<main style="display: flex; flex-direction: column; width: 90%;">	
+
+			<div style="display: flex; flex-direction: row;">
+
+				<div style="display: flex; flex-direction: column; width: 50%; height: auto;">
+
+					<h1>source</h1>
+					<input type="file" id="srcFileInput" accept="image/*">
+					<div style="position: relative;">
+						<img id="srcPreviewImage" src="#" alt="미리보기 이미지" width="1200" height="800">
+						<div id="canvasFrame" style="position: absolute; top: 0;">
+				
+						</div>
+					</div>
+				</div>
+				
+				<!-- <div style="display: flex; flex-direction: column; width: 50%; height: auto;">
+					<label for="targetfileInput"><h1>target</h1> </label>
+					<input type="file" id="targetFileInput" accept="image/*">
+					<img id="targetPreviewImage" src="#" alt="타겟 이미지" width="400" height="400">
+				</div> -->
+			</div>
+
+			<div>
+				<button id="findBtn"><h1>Find Target</h1></button>
+			</div>
+
+			
+		</main>
+		<script type="module" src="./src/scripts/app.ts"></script>
+	</body>
+</html>
